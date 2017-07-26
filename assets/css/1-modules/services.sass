@@ -1,0 +1,64 @@
+.services-section
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+  width: 100%
+  .services
+    display: -webkit-flex
+    display: -ms-flex
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    .image-service
+      width: 33.333%
+      overflow: hidden
+      position: relative
+      &:hover .service-content
+        background-color: rgba(black , .7)
+        opacity: 1
+      .service-content
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: transparent
+        transition: all ease-in-out .45s
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        padding-left: 20px
+        font-family: 'PT Sans', sans-serif
+        color: #FFF
+        opacity: 0
+        h3
+          font-size: 35px
+        p
+          padding: 10px
+          padding-left: 0
+          margin: 0
+          text-align: left
+          width: 250px
+          color: rgba(white, .6)
+        span
+          padding: 6px 10px
+          cursor: pointer
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          align-items: center
+          justify-content: space-between
+          width: 70px
+          border: 2px solid white
+          b
+            margin: 0
+            font-weight: normal
+          i
+            font-size: 17px
+      img
+        width: 100%
+        display: block
+      // margin: 5px
