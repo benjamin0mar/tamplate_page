@@ -1,0 +1,40 @@
+
+.numbers-section
+  width: 100%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: center
+  .numbers-wrapper
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    width: 1000px
+    justify-content: space-around
+    font-family: 'PT Sans', sans-serif
+    padding: 12rem 0
+    box-sizing: border-box
+    &.active-number
+      color: #fff
+      .numbers-content
+        h2,h4
+          color: #fff
+    .numbers-content
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      justify-content: center
+      opacity: 0
+      transition: all ease-in-out .8s
+      &.show
+        opacity: 1
+      h2
+        font-size: 55px
+      h4
+        font-size: 25px
+        font-weight: normal
+        text-transform: capitalize
+        margin: 3px
+        color: rgba(black, .8)

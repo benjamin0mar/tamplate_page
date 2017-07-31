@@ -4,6 +4,8 @@
   display: flex
   justify-content: center
   width: 100%
+  padding-top: 20px
+  padding-bottom: 20px
   .services
     display: -webkit-flex
     display: -ms-flex
@@ -15,8 +17,13 @@
       width: 33.333%
       overflow: hidden
       position: relative
+      opacity: 0
+      transition: all ease-in-out .5s
+      &.show
+        opacity: 1
+        animation: fadeInUp .8s
       &:hover .service-content
-        background-color: rgba(black , .7)
+        background-color: rgba(0, 0, 0, 0.95)
         opacity: 1
       .service-content
         position: absolute
@@ -46,18 +53,8 @@
         span
           padding: 6px 10px
           cursor: pointer
-          display: -webkit-flex
-          display: -ms-flex
-          display: flex
-          align-items: center
-          justify-content: space-between
-          width: 70px
           border: 2px solid white
-          b
-            margin: 0
-            font-weight: normal
-          i
-            font-size: 17px
+          border-radius: 2px
       img
         width: 100%
         display: block

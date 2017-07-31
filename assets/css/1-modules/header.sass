@@ -1,15 +1,17 @@
+body.active-number, body.active-map
+  background-color: #121212
 .bar-nav
   position: fixed
   top: 0
   right: 0
-  background-color: #FFD056
+  background-color: white
   width: 100%
   height: 100vh
   display: -webkit-flex
   display: -ms-flex
   display: flex
   flex-direction: column
-  transition: all ease-in-out .3s
+  transition: all .8s cubic-bezier(.77,0,.175,1)
   z-index: 10
   &.hide
     top: -100%
@@ -20,15 +22,21 @@
     align-self: center
     cursor: pointer
   .menu-items
+    height: 100%
     display: -webkit-flex
     display: -ms-flex
     display: flex
     flex-direction: column
     align-items: center
+    justify-content: space-around
     font-family: 'Source Sans Pro', sans-serif
     li
       list-style: none
       padding: 10px
+      opacity: 0
+      &.show
+        opacity: 1
+        animation: fadeInUp .5s
       a
         color: rgba(black, 1)
         text-transform: uppercase
@@ -50,6 +58,8 @@
   align-items: center
   position: relative
   background-attachment: fixed
+  opacity: 1
+  animation: fadeInUp 1s
   .overlay
     background-image: url(/assets/img/pattern.png) !important
     background-repeat: repeat
@@ -78,12 +88,17 @@
       background-color: white
       .logo, i#show-menu
         color: #000
+    &.active-number, &.active-map
+      background-color: transparent
+      .logo, i#show-menu
+        color: #fff
+
 
     .logo
       font-family: 'Source Sans Pro', sans-serif
       color: white
       font-weight: bold
-      font-size: 25px
+      font-size: 30px
       top: 10px
       left: 10px
       order: 0
@@ -91,7 +106,7 @@
 
     i#show-menu
       color: white
-      font-size: 25px
+      font-size: 30px
       padding: 2px 6px
       align-self: flex-start
       cursor: pointer
@@ -107,54 +122,46 @@
     display: -webkit-flex
     display: -ms-flex
     display: flex
+    align-items: center
     flex-direction: column
     z-index: 2
+    opacity: 0
+    &.show
+      opacity: 1
+      animation: fadeInUp .4s
     .btn-contact
-      color: $accent
-      border: 2px solid $accent
-      padding: 5px
+      color: white
+      border: 2px solid white
+      padding: 8px
       display: flex
       align-items: center
-      justify-content: space-between
-      width: 120px
-      background-color: rgba(black, .5)
+      justify-content: center
       overflow: hidden
       text-transform: capitalize
       letter-spacing: 0.01em
       cursor: pointer
       transition: all ease-in-out .3s
       padding-right: 10px
-      &:hover
-        width: 130px
-        background-color: rgba(black, .7)
-        i
-          margin-left: 10px
-      i
-        font-size: 22px
-        margin-top: 2px
-        margin-left: 8px
+      text-align: center
+      border-radius: 4px
       span
         font-family: 'Source Sans Pro', sans-serif
-        font-size: 14px
+        font-size: 15px
         text-transform: uppercase
     h1,h4
       display: block
       padding: 8px
-      background-color: $accent
       font-weight: bold
-      color: #000
+      color: white
       margin-bottom: 3px
       letter-spacing: -0.03em
-      text-transform: uppercase
+      text-transform: capitalize
     h4
-      width: 145px
-      background-color: #000
-      color: $accent
-      font-size: 22px
+      font-size: 25px
+      margin-bottom: -20px
     h1
-      font-size: 44px
-      &:nth-child(2)
-        width: 190px
+      font-size: 54px
+
   @media (max-width: 550px )
     .slogan
       .btn-contact

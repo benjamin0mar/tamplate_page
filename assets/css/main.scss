@@ -3,10 +3,14 @@
 @import "1-modules/header";
 @import "1-modules/about";
 @import "1-modules/services";
-
-
+@import "1-modules/numbers";
+@import "1-modules/team";
+@import "1-modules/map";
+@import "1-modules/clients";
+@import "1-modules/footer";
 
 body {
     background: white;
+    transition: all ease-in-out .4s;
     -webkit-font-smoothing: antialiased;
 }
