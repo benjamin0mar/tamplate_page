@@ -130,24 +130,56 @@ body.active-number, body.active-map
       opacity: 1
       animation: fadeInUp .4s
     .btn-contact
+      height: 40px
+      line-height: 6rem
+      border-radius: 4px
       color: white
       border: 2px solid white
-      padding: 8px
+      padding: 5px
       display: flex
       align-items: center
       justify-content: center
-      overflow: hidden
       text-transform: capitalize
-      letter-spacing: 0.01em
+      letter-spacing: 0.03em
       cursor: pointer
       transition: all ease-in-out .3s
-      padding-right: 10px
+      padding-right: 20px
+      padding-left: 20px
       text-align: center
       border-radius: 4px
+      box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.19)
+      position: relative
+      overflow: hidden
+      &:hover
+        span
+          color: #000
+          z-index: 10
+          a
+            color: #000
+        &::before
+          margin-left: 0
+
+      &::before
+        transition: all .45s cubic-bezier(0.69,-0.03, 0.3, 0.83)
+        content: ''
+        display: block
+        background-color: #fff
+        position: absolute
+        width: 100%
+        top: 0
+        left: 0
+        height: 100%
+        margin-left: -100%
       span
-        font-family: 'Source Sans Pro', sans-serif
-        font-size: 15px
-        text-transform: uppercase
+        font-family: 'PT Sans', sans-serif
+        font-size: 17px
+        font-weight: bolder
+        a
+          transition: all .5s cubic-bezier(.77,0,.175,1.2)
+          text-decoration: none
+          color: white
+
+
     h1,h4
       display: block
       padding: 8px

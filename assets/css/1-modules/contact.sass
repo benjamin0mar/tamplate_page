@@ -1,0 +1,131 @@
+.contact-section
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: 'PT Sans', sans-serif
+  overflow: hidden
+  flex-direction: column
+  padding: 5rem 0
+  .contact-wrapper
+    flex-direction: column
+    width: 580px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    margin-top: 20px
+    opacity: 0
+    &.show
+      opacity: 1
+      animation: fadeInUp 1s
+    h1
+      font-size: 45px
+      transition: all ease-in-out .8s
+      opacity: 1
+      margin-bottom: 25px
+    h3
+      font-size: 25px
+      font-weight: normal
+      margin-bottom: 35px
+      opacity: 1
+      transition: all ease-in-out .8s
+      color: rgba(#000, .8)
+  .form-wrapper
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: center
+    margin-bottom: 60px
+    form
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      width: 600px
+      align-items: flex-start
+      .btn-enviar
+        line-height: 2.4rem
+        width: 200px
+        border-radius: 4px
+        color: black
+        border: 2px solid black
+        padding: 8px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-transform: capitalize
+        letter-spacing: 0.03em
+        cursor: pointer
+        transition: all .5s cubic-bezier(0.69,-0.03, 0.3, 0.83)
+        text-align: center
+        border-radius: 4px
+        font-family: 'PT Sans', sans-serif
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.19)
+        margin-top: 20px
+        font-size: 17px
+        font-weight: bolder
+        display: block
+        position: relative
+        overflow: hidden
+        background-color: transparent
+        &:focus
+          outline: none
+        &:hover
+          color: #fff
+          &::before
+            margin-left: 0
+        &::before
+          transition: all .45s cubic-bezier(0.69,-0.03, 0.3, 0.83)
+          content: ''
+          display: block
+          background-color: #000
+          position: absolute
+          width: 100%
+          top: 0
+          left: 0
+          z-index: -1
+          height: 100%
+          margin-left: -100%
+      .input
+        position: relative
+        width: 100%
+        &.active
+          &::after
+            transform: scale(1)
+        textarea
+          min-height: 100px
+          resize: none
+        input[type="text"], textarea
+          height: 40px
+          width: 100%
+          margin-top: 18px
+          padding: 5px 0
+          border: none
+          font-family: 'PT Sans', sans-serif
+          font-size: 17px
+          &:focus,&:active
+           outline: none
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          display: block
+          width: 100%
+          height: 3px
+          border-radius: 1px
+          background-color: rgba(0,0,0,.5)
+          transition: all .3s cubic-bezier(.77,0,.175,1.2)
+        &::after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          display: block
+          width: 100%
+          height: 3px
+          transform: scale(0)
+          border-radius: 1px
+          background-color: rgba(0,0,0,1)
+          transition: all .5s cubic-bezier(.77,0,.175,1.2)
