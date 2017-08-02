@@ -410,6 +410,123 @@ body.active-number, body.active-map {
         color: rgba(0, 0, 0, 0.8);
         transition: all ease-in-out .8s; }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -ms-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 20;
+  transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  display: none;
+  opacity: 0; }
+  .modal.show {
+    display: -ms-flex;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    -webkit-animation: fadeIn .4s;
+            animation: fadeIn .4s; }
+  .modal .modal-wrapper {
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    width: 750px;
+    height: 400px;
+    background-color: #fff;
+    position: relative;
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    border-radius: 4px; }
+    .modal .modal-wrapper.show {
+      opacity: 1;
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1); }
+    .modal .modal-wrapper .close-btn {
+      position: absolute;
+      right: -20px;
+      top: -28px; }
+      .modal .modal-wrapper .close-btn i {
+        color: white;
+        font-size: 30px;
+        cursor: pointer; }
+    .modal .modal-wrapper .modal-services {
+      height: 100%;
+      width: 100%;
+      font-family: 'PT Sans', sans-serif;
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+      display: none; }
+      .modal .modal-wrapper .modal-services.show {
+        opacity: 1;
+        display: -ms-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: fadeIn .8s;
+                animation: fadeIn .8s; }
+      .modal .modal-wrapper .modal-services .service-info {
+        width: 50%;
+        padding: 0 40px;
+        box-sizing: border-box; }
+        .modal .modal-wrapper .modal-services .service-info .title-team {
+          font-size: 25px;
+          margin-top: 35px;
+          text-align: left; }
+        .modal .modal-wrapper .modal-services .service-info small {
+          font-size: 15px;
+          text-align: left;
+          display: block;
+          margin-top: 5px; }
+        .modal .modal-wrapper .modal-services .service-info .title {
+          font-size: 30px;
+          margin-top: 30px;
+          margin-bottom: 0px; }
+        .modal .modal-wrapper .modal-services .service-info .description {
+          text-align: justify;
+          padding-top: 8px;
+          box-sizing: border-box;
+          font-size: 14px;
+          line-height: 1.5;
+          color: rgba(0, 0, 0, 0.8); }
+        .modal .modal-wrapper .modal-services .service-info .social {
+          width: 100%;
+          display: -ms-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+          margin-top: 25px; }
+          .modal .modal-wrapper .modal-services .service-info .social i {
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            color: rgba(0, 0, 0, 0.8);
+            width: 20px;
+            height: 20px;
+            margin-right: 25px;
+            display: -ms-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+                justify-content: center;
+            -ms-flex-align: center;
+                align-items: center;
+            font-size: 28px;
+            cursor: pointer; }
+      .modal .modal-wrapper .modal-services .service-img {
+        background-position: center center;
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+        background-color: red; }
+
 .services-section {
   display: -ms-flex;
   display: -ms-flexbox;
@@ -431,14 +548,16 @@ body.active-number, body.active-map {
       overflow: hidden;
       position: relative;
       opacity: 0;
-      transition: all ease-in-out .5s; }
+      transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1); }
       .services-section .services .image-service.show {
         opacity: 1;
-        -webkit-animation: fadeInUp .8s;
-                animation: fadeInUp .8s; }
+        -webkit-animation: slideInUp .5s;
+                animation: slideInUp .5s; }
       .services-section .services .image-service:hover .service-content {
-        background-color: rgba(0, 0, 0, 0.95);
-        opacity: 1; }
+        -webkit-animation: slideInUp .5s;
+                animation: slideInUp .5s;
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.95); }
       .services-section .services .image-service .service-content {
         position: absolute;
         width: 100%;
@@ -459,7 +578,7 @@ body.active-number, body.active-map {
         color: #FFF;
         opacity: 0; }
         .services-section .services .image-service .service-content h3 {
-          font-size: 35px; }
+          font-size: 30px; }
         .services-section .services .image-service .service-content p {
           padding: 10px;
           padding-left: 0;
@@ -468,10 +587,14 @@ body.active-number, body.active-map {
           width: 250px;
           color: rgba(255, 255, 255, 0.6); }
         .services-section .services .image-service .service-content span {
-          padding: 6px 10px;
+          padding: 7px 14px;
           cursor: pointer;
           border: 2px solid white;
-          border-radius: 2px; }
+          background-color: white;
+          color: #000;
+          border-radius: 2px;
+          font-weight: bold;
+          box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.19); }
       .services-section .services .image-service img {
         width: 100%;
         display: block; }
@@ -593,34 +716,92 @@ body.active-number, body.active-map {
         -ms-flex-direction: column;
             flex-direction: column;
         transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-        opacity: 0; }
+        opacity: 0;
+        min-height: 361px; }
         .team-section .team-wrapper .team-content .team.show {
           opacity: 1;
           -webkit-animation: fadeInUp .8s;
                   animation: fadeInUp .8s; }
-        .team-section .team-wrapper .team-content .team:hover {
-          -webkit-transform: scale(1.02);
-                  transform: scale(1.02); }
+        .team-section .team-wrapper .team-content .team:hover img {
+          -webkit-filter: grayscale(1) contrast(1.5) invert(0.1);
+                  filter: grayscale(1) contrast(1.5) invert(0.1);
+          z-index: 2; }
+        .team-section .team-wrapper .team-content .team:hover h4, .team-section .team-wrapper .team-content .team:hover h2 {
+          margin-left: 5px;
+          z-index: 3; }
+        .team-section .team-wrapper .team-content .team:hover h2 {
+          margin-top: -32px;
+          color: #fff; }
+        .team-section .team-wrapper .team-content .team:hover h4 {
+          margin-top: 5px;
+          font-weight: bold; }
+        .team-section .team-wrapper .team-content .team:hover .sub-name i {
+          opacity: 1; }
+        .team-section .team-wrapper .team-content .team img {
+          transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+          width: 100%; }
         .team-section .team-wrapper .team-content .team h2 {
-          font-size: 20px;
-          padding-top: 8px; }
-        .team-section .team-wrapper .team-content .team h4 {
           font-size: 18px;
+          padding-top: 8px;
+          transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
+        .team-section .team-wrapper .team-content .team h4 {
+          font-size: 16px;
           color: rgba(0, 0, 0, 0.8);
-          font-weight: normal; }
+          font-weight: normal;
+          margin: 0;
+          transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
+        .team-section .team-wrapper .team-content .team .sub-name {
+          display: -ms-flex;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+          -ms-flex-align: center;
+              align-items: center; }
+          .team-section .team-wrapper .team-content .team .sub-name i {
+            transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+            opacity: 0;
+            box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.19);
+            padding: 10px;
+            width: 20px;
+            height: 20px;
+            display: -ms-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: center;
+                justify-content: center;
+            -ms-flex-align: center;
+                align-items: center;
+            border-radius: 50%;
+            margin-top: -22px;
+            margin-right: 10px;
+            font-size: 18px;
+            z-index: 5;
+            background-color: white;
+            cursor: pointer; }
 
-.map-section .map-wrapper {
-  height: 500px;
-  width: 100%; }
-  .map-section .map-wrapper #map {
-    height: 100%;
-    -webkit-filter: grayscale(1) brightness(0.7) contrast(1.3);
-            filter: grayscale(1) brightness(0.7) contrast(1.3);
-    opacity: 0;
-    transition: all ease-in-out .3s;
+.map-section {
+  position: relative; }
+  .map-section .overlay-map {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background-color: #ffffff;
+    z-index: 2;
+    bottom: 0; }
+  .map-section .map-wrapper {
+    height: 525px;
     width: 100%; }
-    .map-section .map-wrapper #map.show {
-      opacity: 1; }
+    .map-section .map-wrapper #map {
+      height: 100%;
+      -webkit-filter: grayscale(1) brightness(0.7) contrast(1.3);
+              filter: grayscale(1) brightness(0.7) contrast(1.3);
+      opacity: 0;
+      transition: all ease-in-out .3s;
+      width: 100%; }
+      .map-section .map-wrapper #map.show {
+        opacity: 1; }
 
 .clients-section {
   display: -ms-flex;
@@ -759,11 +940,7 @@ body.active-number, body.active-map {
           transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1.2); }
 
 .footer-section {
-  background-image: url(/assets/img/bg2.jpg);
-  background-size: cover;
-  background-position: center center;
   width: 100%;
-  min-height: 150px;
   display: -ms-flex;
   display: -ms-flexbox;
   display: flex;
@@ -772,19 +949,10 @@ body.active-number, body.active-map {
   -ms-flex-align: center;
       align-items: center;
   position: relative;
-  background-attachment: fixed; }
-  .footer-section .overlay {
-    background-image: url(/assets/img/pattern.png) !important;
-    background-repeat: repeat;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    opacity: .5; }
+  background-color: #030303; }
   .footer-section .footer-wrapper {
     position: relative;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     display: -ms-flex;
     display: -ms-flexbox;
     display: flex;
@@ -792,34 +960,62 @@ body.active-number, body.active-map {
         justify-content: space-around;
     width: 100%;
     -ms-flex-align: start;
-        align-items: flex-start; }
+        align-items: flex-start;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
     .footer-section .footer-wrapper .info span {
       display: -ms-flex;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-align: start;
-          align-items: flex-start;
-      color: white; }
+      -ms-flex-align: center;
+          align-items: center;
+      color: white;
+      margin-bottom: 8px; }
       .footer-section .footer-wrapper .info span p {
-        font-size: 18px;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 13px;
         margin: 0;
-        font-weight: normal; }
+        font-weight: normal;
+        margin-left: 10px;
+        margin-top: -4px; }
       .footer-section .footer-wrapper .info span i {
-        font-size: 30px; }
-    .footer-section .footer-wrapper .social h1 {
-      font-size: 35px;
-      color: #fff;
-      margin: 0; }
-    .footer-section .footer-wrapper .social .social-icon {
-      display: -ms-flex;
-      display: -ms-flexbox;
-      display: flex;
-      width: 140px;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-      .footer-section .footer-wrapper .social .social-icon i {
+        font-size: 25px;
+        color: #000;
+        background-color: #fff;
+        width: 30px;
+        height: 30px;
+        display: -ms-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center;
+        border-radius: 3px; }
+    .footer-section .footer-wrapper .social {
+      text-align: left; }
+      .footer-section .footer-wrapper .social h1 {
+        font-size: 30px;
         color: #fff;
-        font-size: 40px; }
+        margin: 0;
+        margin-bottom: 20px; }
+      .footer-section .footer-wrapper .social small {
+        color: #fff;
+        width: 200px;
+        display: block;
+        margin-bottom: 20px;
+        margin-top: -10px; }
+      .footer-section .footer-wrapper .social .social-icon {
+        display: -ms-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 135px;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+        .footer-section .footer-wrapper .social .social-icon i {
+          color: #fff;
+          font-size: 40px; }
 
 .contact-section {
   display: -ms-flex;
@@ -833,7 +1029,8 @@ body.active-number, body.active-map {
   overflow: hidden;
   -ms-flex-direction: column;
       flex-direction: column;
-  padding: 5rem 0; }
+  padding: 5rem 0;
+  margin-top: -25px; }
   .contact-section .contact-wrapper {
     -ms-flex-direction: column;
         flex-direction: column;
@@ -880,7 +1077,7 @@ body.active-number, body.active-map {
         width: 200px;
         border-radius: 4px;
         color: black;
-        border: 2px solid black;
+        border: 3px solid black;
         padding: 8px;
         display: -ms-flexbox;
         display: flex;
@@ -968,4 +1165,5 @@ body.active-number, body.active-map {
 body {
   background: white;
   transition: all ease-in-out .4s;
+  position: relative;
   -webkit-font-smoothing: antialiased; }

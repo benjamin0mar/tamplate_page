@@ -1,3 +1,112 @@
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(black,.7)
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 20
+  transition: all .8s cubic-bezier(.77,0,.175,1)
+  display: none
+  opacity: 0
+  &.show
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    opacity: 1
+    animation: fadeIn .4s
+  .modal-wrapper
+    transition: all .4s cubic-bezier(.77,0,.175,1)
+    width: 750px
+    height: 400px
+    background-color: #fff
+    position: relative
+    opacity: 0
+    transform: scaleX(0)
+    border-radius: 4px
+    &.show
+      opacity: 1
+      transform: scaleX(1)
+    .close-btn
+      position: absolute
+      right: -20px
+      top: -28px
+      i
+        color: white
+        font-size: 30px
+        cursor: pointer
+    .modal-services
+      height: 100%
+      width: 100%
+      font-family: 'PT Sans', sans-serif
+      opacity: 0
+      transition: all .8s cubic-bezier(.77,0,.175,1)
+      display: none
+      &.show
+        opacity: 1
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        animation: fadeIn .8s
+      .service-info
+        width: 50%
+        padding: 0 40px
+        box-sizing: border-box
+        .title-team
+          font-size: 25px
+          margin-top: 35px
+          text-align: left
+        small
+          font-size: 15px
+          text-align: left
+          display: block
+          margin-top: 5px
+        .title
+          font-size: 30px
+          margin-top: 30px
+          margin-bottom: 0px
+        .description
+          text-align: justify
+          padding-top: 8px
+          box-sizing: border-box
+          font-size: 14px
+          line-height: 1.5
+          color: rgba(black, 0.8)
+        .social
+          width: 100%
+          display: -webkit-flex
+          display: -ms-flex
+          display: flex
+          justify-content: flex-start
+          margin-top: 25px
+          i
+            border-radius: 4px
+            border: 1px solid rgba(black, .8)
+            padding: 15px
+            color: rgba(black, .8)
+            width: 20px
+            height: 20px
+            margin-right: 25px
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 28px
+            cursor: pointer
+      .service-img
+        background-position: center center
+        background-size: cover
+        width: 50%
+        height: 100%
+        background-color: red
+
+
 .services-section
   display: -webkit-flex
   display: -ms-flex
@@ -16,13 +125,14 @@
       overflow: hidden
       position: relative
       opacity: 0
-      transition: all ease-in-out .5s
+      transition: all .4s cubic-bezier(.77,0,.175,1)
       &.show
         opacity: 1
-        animation: fadeInUp .8s
+        animation: slideInUp .5s
       &:hover .service-content
-        background-color: rgba(0, 0, 0, 0.95)
+        animation: slideInUp .5s
         opacity: 1
+        background-color: rgba(0, 0, 0, 0.95)
       .service-content
         position: absolute
         width: 100%
@@ -40,7 +150,7 @@
         color: #FFF
         opacity: 0
         h3
-          font-size: 35px
+          font-size: 30px
         p
           padding: 10px
           padding-left: 0
@@ -49,10 +159,14 @@
           width: 250px
           color: rgba(white, .6)
         span
-          padding: 6px 10px
+          padding: 7px 14px
           cursor: pointer
           border: 2px solid white
+          background-color: white
+          color: #000
           border-radius: 2px
+          font-weight: bold
+          box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.19)
       img
         width: 100%
         display: block

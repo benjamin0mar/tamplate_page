@@ -1,9 +1,44 @@
 $(function(){
   menu();
   hoverInput();
+  modal();
   smoothScroll(800);
 });
 
+function modal(){
+  $(".open-modal").click(function(){
+    $(".modal").addClass("show");
+
+    var idModal = $(this).parent().parent().attr("id")+"-m";
+
+    setTimeout(function(){
+      $(".modal-wrapper").addClass("show");
+    }, 300);
+
+    $("#"+idModal).siblings().removeClass("show");
+
+    setTimeout(function(){
+      $("#"+idModal).addClass("show");
+    }, 500);
+  });
+
+  $(".close-modal").click(function(){
+    closeModal();
+  })
+
+}
+
+function closeModal(){
+  setTimeout(function(){
+    $(".modal-services").removeClass("show");
+  }, 200);
+  setTimeout(function(){
+    $(".modal-wrapper").removeClass("show");
+  }, 300);
+  setTimeout(function(){
+    $(".modal").removeClass("show");
+  }, 600);
+}
 
 function smoothScroll (duration) {
  $('a[href^="#"]').on('click', function(event) {
