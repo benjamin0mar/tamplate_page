@@ -105,7 +105,56 @@
         width: 50%
         height: 100%
         background-color: red
+        border-bottom-left-radius: 4px
+        border-top-left-radius: 4px
 
+  @media (max-width: 835px)
+    .modal-wrapper
+      width: 550px
+      .modal-services
+        .service-info
+          width: 60%
+        .service-img
+          width: 40%
+  @media (max-width: 620px)
+    .modal-wrapper
+      width: calc(100% - 10px)
+      margin: 5px
+      .close-btn
+        right: 0px
+        top: -30px
+      .modal-services
+        .service-info
+          width: 60%
+        .service-img
+          width: 40%
+
+    @media (max-width: 620px)
+      .modal-wrapper
+        width: 300px
+        .modal-services
+          .service-info
+            width: 100%
+            .title-team
+              font-size: 22px
+            .description
+              margin-top: 0
+            .social
+              margin-top: 5px
+              justify-content: space-between
+              i
+                width: 10px
+                margin-right: 0
+                height: 10px
+          .service-img
+            display: none
+    @media (max-width: 350px)
+      .modal-wrapper
+        width: calc(100% - 20px)
+        margin: 10px
+        // height: auto
+        .description
+          padding-bottom: 15px
 
 .services-section
   display: -webkit-flex
@@ -113,6 +162,7 @@
   display: flex
   justify-content: center
   width: 100%
+  background-color: #fff
   .services
     display: -webkit-flex
     display: -ms-flex
@@ -167,7 +217,33 @@
           border-radius: 2px
           font-weight: bold
           box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.19)
+      @media (max-width: 1000px)
+        .service-content
+          h3
+            font-size: 22px
+          p
+            width: 180px
+            font-size: 11px
+
       img
         width: 100%
         display: block
       // margin: 5px
+    @media (max-width: 800px)
+      .image-service
+        width: 50%
+        .service-content
+          h3
+            font-size: 22px
+          p
+            width: 180px
+            font-size: 11px
+    @media (max-width: 480px)
+      .image-service
+        width: 100%
+        .service-content
+          h3
+            font-size: 22px
+          p
+            width: 180px
+            font-size: 11px

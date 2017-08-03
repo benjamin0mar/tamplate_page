@@ -6,6 +6,7 @@
   align-items: center
   font-family: 'PT Sans', sans-serif
   overflow: hidden
+  background-color: #fff
   .team-wrapper
     flex-direction: column
     width: 600px
@@ -107,3 +108,49 @@
             z-index: 5
             background-color: white
             cursor: pointer
+  @media (max-width: 750px )
+    .team-wrapper
+      h1
+        font-size: 35px
+      h3
+        font-size: 22px
+        width: 500px
+        align-self: center
+
+  @media (max-width: 570px )
+    .team-wrapper
+      h1
+        margin-bottom: 10px
+      h3
+        font-size: 19px
+        width: 100%
+        padding: 10px
+        box-sizing: border-box
+        align-self: center
+      .team-content
+        .team
+            min-height: 300px
+
+  @media (max-width: 500px )
+    .team-wrapper
+      .team-content
+        .team
+          min-height: 400px
+          margin: 0 auto
+          width: calc(70% - 40px)
+
+  @media (max-width: 430px )
+    .team-wrapper
+      .team-content
+        .team
+          min-height: 380px
+          margin: 0 auto
+          width: calc(80% - 40px)
+
+  @media (max-width: 350px )
+    .team-wrapper
+      .team-content
+        .team
+          min-height: 390px
+          margin: 0 auto
+          width: calc(100% - 40px)

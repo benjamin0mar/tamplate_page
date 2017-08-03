@@ -1,4 +1,4 @@
-.footer-section
+#footer-section.footer-section
   width: 100%
   display: -webkit-flex
   display: -ms-flex
@@ -7,6 +7,11 @@
   align-items: center
   position: relative
   background-color: #030303
+  position: fixed
+  left: 0px
+  bottom: 0px
+  z-index: -1
+  // height: 30px
   .footer-wrapper
     position: relative
     font-family: 'PT Sans', sans-serif
@@ -69,3 +74,9 @@
         i
           color: #fff
           font-size: 40px
+
+  @media (max-width: 540px)
+    .footer-wrapper
+      flex-direction: column
+      .social:first-child
+        margin-bottom: 40px

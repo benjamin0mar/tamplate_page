@@ -5,6 +5,7 @@
   justify-content: center
   width: 100%
   overflow: hidden
+  background-color: #fff
   .about-wrapper
     display: -webkit-flex
     display: -ms-flex
@@ -12,7 +13,6 @@
     flex-direction: column
     align-items: center
     position: relative
-
     .about-content
       margin-top: 30px
       margin-bottom: 30px
@@ -37,3 +37,21 @@
         opacity: 0
         color: rgba(black, .8)
         transition: all ease-in-out .8s
+  @media (max-width: 830px )
+    .about-wrapper
+      .about-content
+        padding: 6rem 0
+        width: 100%
+        h2
+          font-size: 34px
+        h1
+          font-size: 24px
+          width: 500px
+  @media (max-width: 600px )
+    .about-wrapper
+      .about-content
+        h1
+          font-size: 24px
+          width: 100%
+          padding: 10px
+          box-sizing: border-box

@@ -12,7 +12,6 @@
   background-size: cover
   background-position: center center
   width: 100%
-  position: relative
   background-attachment: fixed
   filter: grayscale(1) contrast(1.1)
   .overlay
@@ -57,3 +56,25 @@
         text-transform: capitalize
         margin: 3px
         color: rgba(black, .8)
+  @media (max-width: 650px )
+    .numbers-wrapper
+      width: 100%
+      .numbers-content
+        h2
+          font-size: 45px
+        h4
+          font-size: 20px
+
+  @media (max-width: 530px )
+    .numbers-wrapper
+      flex-wrap: wrap
+      width: 100%
+      padding: 4rem 0
+      .numbers-content
+        width: 50%
+        margin-bottom: 15px
+        margin-top: 15px
+        h2
+          font-size: 40px
+        h4
+          font-size: 18px

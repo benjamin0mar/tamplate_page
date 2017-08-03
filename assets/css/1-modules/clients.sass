@@ -9,6 +9,7 @@ $color-border: rgba(0,0,0,.5)
   overflow: hidden
   flex-direction: column
   padding: 5rem 0
+  background-color: #fff
   .clients-wrapper
     flex-direction: column
     width: 600px
@@ -126,3 +127,60 @@ $color-border: rgba(0,0,0,.5)
           filter: invert(1)
           opacity: .5
           transition: all .3s cubic-bezier(.77,0,.175,1.2)
+  @media (max-width: 750px )
+    .clients-wrapper
+      h1
+        font-size: 35px
+      h3
+        font-size: 22px
+        width: 500px
+        align-self: center
+  @media (max-width: 700px )
+    .client-content
+      width: calc(100% - 20px)
+      margin: 10px
+      .slide-wrapper
+        .client
+          img
+            transform: scale(.7)
+  @media (max-width: 630px )
+    .client-content
+      width: calc(90% - 20px)
+      margin: 10px
+      .slide-wrapper
+        .client
+          width: calc(50% - 20px)
+          img
+            transform: scale(.8)
+
+  @media (max-width: 570px )
+    .clients-wrapper
+      width: 100%
+      h1
+        margin-bottom: 10px
+      h3
+        font-size: 19px
+        width: 100%
+        padding: 10px
+        box-sizing: border-box
+        align-self: center
+
+  @media (max-width: 530px )
+    .client-content
+      width: calc(100% - 20px)
+      margin: 10px
+      .slide-wrapper
+        .client
+          width: calc(50% - 20px)
+          img
+            transform: scale(.8)
+
+  @media (max-width: 400px )
+    .client-content
+      width: calc(100% - 20px)
+      margin: 10px
+      .slide-wrapper
+        .client
+          width: calc(100% - 20px)
+          img
+            transform: scale(.8)
