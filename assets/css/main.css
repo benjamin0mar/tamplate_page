@@ -1171,7 +1171,7 @@ body.active-number, body.active-map {
         margin-left: 10px;
         margin-top: -4px; }
       #footer-section.footer-section .footer-wrapper .info span i {
-        font-size: 25px;
+        font-size: 20px;
         color: #000;
         background-color: #fff;
         width: 30px;
@@ -1206,7 +1206,7 @@ body.active-number, body.active-map {
             justify-content: space-between; }
         #footer-section.footer-section .footer-wrapper .social .social-icon i {
           color: #fff;
-          font-size: 40px; }
+          font-size: 30px; }
   @media (max-width: 540px) {
     #footer-section.footer-section .footer-wrapper {
       -ms-flex-direction: column;
@@ -1294,7 +1294,6 @@ body.active-number, body.active-map {
         line-height: 2.4rem;
         width: 200px;
         border-radius: 4px;
-        color: black;
         border: 3px solid black;
         padding: 8px;
         display: -ms-flexbox;
@@ -1317,14 +1316,16 @@ body.active-number, body.active-map {
         display: block;
         position: relative;
         overflow: hidden;
-        background-color: transparent; }
+        background-color: transparent;
+        color: black; }
         .contact-section .form-wrapper form .btn-enviar:focus {
           outline: none; }
         .contact-section .form-wrapper form .btn-enviar:hover {
           color: #fff;
           z-index: 1; }
           .contact-section .form-wrapper form .btn-enviar:hover::before {
-            margin-left: 0; }
+            margin-left: 0;
+            z-index: -1; }
         .contact-section .form-wrapper form .btn-enviar::before {
           transition: all 0.45s cubic-bezier(0.69, -0.03, 0.3, 0.83);
           content: '';
@@ -1334,7 +1335,6 @@ body.active-number, body.active-map {
           width: 100%;
           top: 0;
           left: 0;
-          z-index: -1;
           height: 100%;
           margin-left: -100%; }
       .contact-section .form-wrapper form .input {

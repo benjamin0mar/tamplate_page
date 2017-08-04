@@ -69,7 +69,6 @@
         line-height: 2.4rem
         width: 200px
         border-radius: 4px
-        color: black
         border: 3px solid black
         padding: 8px
         display: flex
@@ -90,6 +89,7 @@
         position: relative
         overflow: hidden
         background-color: transparent
+        color: black
         &:focus
           outline: none
         &:hover
@@ -97,6 +97,7 @@
           z-index: 1
           &::before
             margin-left: 0
+            z-index: -1
         &::before
           transition: all .45s cubic-bezier(0.69,-0.03, 0.3, 0.83)
           content: ''
@@ -106,7 +107,6 @@
           width: 100%
           top: 0
           left: 0
-          z-index: -1
           height: 100%
           margin-left: -100%
       .input
