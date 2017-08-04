@@ -832,7 +832,9 @@ body.active-number, body.active-map {
           margin-top: 5px;
           font-weight: bold; }
         .team-section .team-wrapper .team-content .team:hover .sub-name i {
-          opacity: 1; }
+          opacity: 1;
+          -webkit-transform: rotate(135deg);
+                  transform: rotate(135deg); }
         .team-section .team-wrapper .team-content .team img {
           transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
           width: 100%; }
@@ -1128,19 +1130,21 @@ body.active-number, body.active-map {
 
 #footer-section.footer-section {
   width: 100%;
-  display: -ms-flex;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
   position: relative;
+  display: none;
   background-color: #030303;
   position: fixed;
   left: 0px;
   bottom: 0px;
   z-index: -1; }
+  #footer-section.footer-section.show {
+    display: -ms-flex;
+    display: -ms-flexbox;
+    display: flex; }
   #footer-section.footer-section .footer-wrapper {
     position: relative;
     font-family: 'PT Sans', sans-serif;

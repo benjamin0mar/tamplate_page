@@ -27,7 +27,7 @@ function footerFixed(){
 }
 
 function modal(){
-  $(".open-modal").click(function(){
+  $(".open-modal, .sub-name .icon").click(function(){
     $(".modal").addClass("show");
 
     var idModal = $(this).parent().parent().attr("id")+"-m";
@@ -221,7 +221,7 @@ function menu()
 
     if(wTop + 100 > conctactTop && wTop + 100 < conctactTop + $(".contact-section").height()){
       if(ct==0){
-        $(".contact-wrapper").addClass("show");
+        $(".contact-wrapper,.footer-section").addClass("show");
       }
       ct++;
     }

@@ -1,16 +1,18 @@
 #footer-section.footer-section
   width: 100%
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
   justify-content: center
   align-items: center
   position: relative
+  display: none
   background-color: #030303
   position: fixed
   left: 0px
   bottom: 0px
   z-index: -1
+  &.show
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
   // height: 30px
   .footer-wrapper
     position: relative
