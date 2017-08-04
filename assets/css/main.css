@@ -197,7 +197,7 @@ body.active-number, body.active-map {
           color: rgba(0, 0, 0, 0.7); }
 
 .header-section {
-  background-image: url(/assets/img/bg2.jpg);
+  background-image: url(../img/bg2.jpg);
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -214,7 +214,7 @@ body.active-number, body.active-map {
   -webkit-animation: fadeInUp 1s;
           animation: fadeInUp 1s; }
   .header-section .overlay {
-    background-image: url(/assets/img/pattern.png) !important;
+    background-image: url(../img/pattern.png) !important;
     background-repeat: repeat;
     height: 100%;
     left: 0;
@@ -683,7 +683,7 @@ body.active-number, body.active-map {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  background-image: url(/assets/img/bg.jpg);
+  background-image: url(../img/bg.jpg);
   background-blend-mode: multiply;
   background-color: rgba(45, 45, 45, 0.81);
   background-size: cover;
@@ -693,7 +693,7 @@ body.active-number, body.active-map {
   -webkit-filter: grayscale(1) contrast(1.1);
           filter: grayscale(1) contrast(1.1); }
   .numbers-section .overlay {
-    background-image: url(/assets/img/pattern.png) !important;
+    background-image: url(../img/pattern.png) !important;
     background-repeat: repeat;
     height: 100%;
     left: 0;
@@ -1321,7 +1321,8 @@ body.active-number, body.active-map {
         .contact-section .form-wrapper form .btn-enviar:focus {
           outline: none; }
         .contact-section .form-wrapper form .btn-enviar:hover {
-          color: #fff; }
+          color: #fff;
+          z-index: 1; }
           .contact-section .form-wrapper form .btn-enviar:hover::before {
             margin-left: 0; }
         .contact-section .form-wrapper form .btn-enviar::before {
